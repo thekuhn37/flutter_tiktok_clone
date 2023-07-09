@@ -5,13 +5,15 @@ import 'package:tiktok_clone/features/authenfication/email_screen.dart';
 
 class AuthButton extends StatelessWidget {
   final String text;
-  // text 변수를 선언해줌
   final FaIcon icon;
+  final void Function(BuildContext) ontapfunction;
+  //변수를 선언해줌
 
   const AuthButton({
     super.key,
     required this.text,
     required this.icon,
+    required this.ontapfunction,
   });
   // super.key 커서 이동 후 code action 열어서 final field parameter initialize 버튼 클릭
 

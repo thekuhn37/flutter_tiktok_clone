@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tiktok_clone/constants/gaps.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
+import 'package:tiktok_clone/features/authenfication/login_form_screen.dart';
 import 'package:tiktok_clone/features/authenfication/widgets/auth_button.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -12,6 +13,14 @@ class LoginScreen extends StatelessWidget {
   }
   // push는 한 화면 위에 다른 화면을 얹는 효과이다.(put new layer of screen on the stack(pile) of screens)
   // 대신에 pop을 사용한다.(pop will remove the most recently added pancake.)
+
+  void _onEmailLoginTap(BuildContext context) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => const LoginFormScreen(),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -37,10 +46,13 @@ class LoginScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               Gaps.v40,
-              AuthButton(
-                icon: const FaIcon(FontAwesomeIcons.user),
-                text: "Use email & password",
-                ontapfunction: (context) {},
+              GestureDetector(
+                onTap: () => _onEmailLoginTap(context),
+                child: AuthButton(
+                  icon: const FaIcon(FontAwesomeIcons.user),
+                  text: "Use email & password",
+                  ontapfunction: (context) {},
+                ),
               ),
               Gaps.v16,
               AuthButton(

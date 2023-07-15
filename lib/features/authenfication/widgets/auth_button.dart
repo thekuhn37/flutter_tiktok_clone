@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
-import 'package:tiktok_clone/features/authenfication/usesrname_screen.dart';
 
 class AuthButton extends StatelessWidget {
   final String text;
@@ -17,18 +16,18 @@ class AuthButton extends StatelessWidget {
   });
   // super.key 커서 이동 후 code action 열어서 final field parameter initialize 버튼 클릭
 
-  void _onEmailTap(BuildContext context) {
-    Navigator.of(context).push(
-      MaterialPageRoute(
-        builder: (context) => const UsernameScreen(),
-      ),
-    );
-  }
+  // void _onEmailTap(BuildContext context) {
+  //   Navigator.of(context).push(
+  //     MaterialPageRoute(
+  //       builder: (context) => const LoginFormScreen(),
+  //     ),
+  //   );
+  // }
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => _onEmailTap(context),
+      // onTap: () => _onEmailTap(context),
       child: FractionallySizedBox(
         // FractionallySizedBox : 절대값을 갖지 않되 father 크기에 상대적인 fraction 비율 갖는 박스
         widthFactor: 1,

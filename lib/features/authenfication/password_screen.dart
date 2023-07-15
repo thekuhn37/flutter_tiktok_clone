@@ -103,7 +103,7 @@ class _PasswordScreenState extends State<PasswordScreen> {
         ),
         body: Padding(
           padding: const EdgeInsets.symmetric(
-            horizontal: 36,
+            horizontal: Sizes.size36,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

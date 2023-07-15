@@ -112,7 +112,8 @@ class _EmailScreenState extends State<EmailScreen> {
               GestureDetector(
                   onTap: _onSubmit,
                   child: FormButton(
-                      disabled: _email.isEmpty || _isEmailValid() != null))
+                      textButton: 'Next!',
+                      disabled: _email.isEmpty || _isEmailValid() != null)),
               //  || : or
             ],
           ),

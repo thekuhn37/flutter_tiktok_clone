@@ -102,7 +102,7 @@ class _BirthdayScreenState extends State<BirthdayScreen> {
               onTap: _onNextTap,
               child: FormButton(
                 disabled: false,
-                textButton: 'Next',
+                textButton: 'Sign Up',
               ),
             )
           ],
